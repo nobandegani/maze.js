@@ -1,15 +1,15 @@
-import {buildMaze} from './lib/main.js';
-import {shapes} from './lib/shapes.js';
-import {algorithms} from './lib/algorithms.js';
-import {buildRandom} from './lib/random.js';
+import {buildMaze} from './main.js';
+import {shapes} from './shapes.js';
+import {algorithms} from './algorithms.js';
+import {buildRandom} from './random.js';
 import {
     ALGORITHM_NONE, METADATA_MASKED, METADATA_END_CELL, METADATA_START_CELL, EVENT_CLICK, EXITS_NONE, EXITS_HARDEST, EXITS_HORIZONTAL, EXITS_VERTICAL,
     METADATA_PLAYER_CURRENT, METADATA_PLAYER_VISITED, METADATA_PATH, METADATA_VISITED,
     DIRECTION_NORTH, DIRECTION_SOUTH, DIRECTION_EAST, DIRECTION_WEST, DIRECTION_NORTH_WEST, DIRECTION_NORTH_EAST, DIRECTION_SOUTH_WEST, DIRECTION_SOUTH_EAST,
     DIRECTION_CLOCKWISE, DIRECTION_ANTICLOCKWISE, DIRECTION_INWARDS, DIRECTION_OUTWARDS,
     SHAPE_SQUARE, SHAPE_TRIANGLE, SHAPE_HEXAGON, SHAPE_CIRCLE
-} from './lib/constants.js';
-import {buildEventTarget} from './lib/utils.js';
+} from './constants.js';
+import {buildEventTarget} from './utils.js';
 
 // Import jsdom to simulate a browser environment
 import { JSDOM } from 'jsdom';
