@@ -278,7 +278,7 @@ function buildModel() {
     return model;
 }
 
-export function BuildCustomMaze(width = 10, height = 10, alo = 'recursiveBacktrack'){
+export function BuildCustomMaze(width = 10, height = 10, alo = 'recursiveBacktrack', randomSeed = ''){
     console.log("start on windows load");
 
     const model = buildModel();
@@ -301,8 +301,19 @@ export function BuildCustomMaze(width = 10, height = 10, alo = 'recursiveBacktra
         height: height,
         layers: width
     };
+    model.randomSeed = Number(randomSeed || buildRandom().int(Math.pow(10,9)));
 
     const grid = Object.assign({'cellShape': model.shape}, model.size);
+
+    /*
+    maze = buildMaze({
+        grid,
+        'algorithm':  overrides.algorithm || model.algorithm,
+        'randomSeed' : model.randomSeed,
+        'element': overrides.element || document.getElementById('maze'),
+        'mask': overrides.mask || model.mask[getModelMaskKey()],
+        'exitConfig': overrides.exitConfig || model.exitConfig
+    });*/
 
     const maze = buildMaze({
         grid,
